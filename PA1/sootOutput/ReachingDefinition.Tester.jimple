@@ -1,0 +1,56 @@
+public class ReachingDefinition.Tester extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        ReachingDefinition.Tester this;
+
+        this := @this: ReachingDefinition.Tester;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        return;
+    }
+
+    public static void happy(int)
+    {
+        int n, x, t, input;
+        byte y, z;
+        java.io.InputStream $r0;
+        java.util.Scanner sc, $r1;
+        java.io.PrintStream $r2;
+
+        n := @parameter0: int;
+        x = 2;
+        y = 10;
+        z = 3;
+        t = z;
+        $r1 = new java.util.Scanner;
+        $r0 = <java.lang.System: java.io.InputStream in>;
+        specialinvoke $r1.<java.util.Scanner: void <init>(java.io.InputStream)>($r0);
+        sc = $r1;
+        input = virtualinvoke sc.<java.util.Scanner: int nextInt()>();
+        if input <= 0 goto label0;
+
+        x = x + 1;
+        y = 2;
+        z = 3;
+        goto label1;
+
+     label0:
+        y = 2;
+
+     label1:
+        $r2 = <java.lang.System: java.io.PrintStream out>;
+        virtualinvoke $r2.<java.io.PrintStream: void println(int)>(y);
+        goto label3;
+
+     label2:
+        t = t + 1;
+
+     label3:
+        if x < y goto label2;
+
+        $r2 = <java.lang.System: java.io.PrintStream out>;
+        virtualinvoke $r2.<java.io.PrintStream: void println(int)>(y);
+        return;
+    }
+}
